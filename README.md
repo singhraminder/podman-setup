@@ -10,11 +10,17 @@ Click https://aka.ms/terminal and this will open Windows Store and download/upda
 
 References:
 Official Podman installation url: https://podman.io/getting-started/installation 
+
 https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview
+
 https://www.how2shout.com/linux/how-to-upgrade-wsl-2-or-1-ubuntu-20-04-to-22-04-lts/
+
 https://alessio.franceschelli.me/posts/windows/wsl2-upgrade/
+
 https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
+
 https://computingforgeeks.com/how-to-install-podman-on-ubuntu/
+
 
 
 Windows Check Settings -> system -> about -> windows specifications -> shows Windows OS build: 22543.1000
