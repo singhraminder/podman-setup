@@ -22,13 +22,12 @@ https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m
 https://computingforgeeks.com/how-to-install-podman-on-ubuntu/
 
 
-
 Windows Check Settings -> system -> about -> windows specifications -> shows Windows OS build: 22543.1000
 wsl2 can't be installed if os build < 20000
 
-C:\>wsl --status
+>wsl --status
 
-C:\>wsl --list -o
+>wsl --list -o
 The following is a list of valid distributions that can be installed.
 The default distribution is denoted by '*'.
 Install using 'wsl --install -d <Distro>'.
@@ -44,7 +43,7 @@ Install using 'wsl --install -d <Distro>'.
   Ubuntu-20.04    Ubuntu 20.04 LTS 
   
 
-C:\wsl2>wsl --install -d Ubuntu-20.04
+>wsl --install -d Ubuntu-20.04
 The requested operation requires elevation.
 Installing: Virtual Machine Platform
 Virtual Machine Platform has been installed.
@@ -60,7 +59,7 @@ Error: 0x80370114 The operation could not be started because a required feature 
 
 Press any key to continue...
   
-<How to Fix this>
+#<How to Fix this>
 Control panel -> Programs & Feature -> Turn windows features on or off -> ON: windows subsystem for linux , off: windows hypervisor platform, ON: Virtual machine platform -> Reboot -> and then start ubuntu program...
 
 Installing, this may take a few minutes...
@@ -74,7 +73,7 @@ installed from MS store:
 For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 The operation completed successfully.
 
-C:\wsl2>wsl --list -o
+>wsl --list -o
 The following is a list of valid distributions that can be installed.
 Install using 'wsl.exe --install <Distro>'.
 
@@ -88,26 +87,26 @@ SLES-15         SUSE Linux Enterprise Server v15
 Ubuntu-18.04    Ubuntu 18.04 LTS
 Ubuntu-20.04    Ubuntu 20.04 LTS
 
-C:\wsl2>wsl --install Ubuntu-20.04
+>wsl --install Ubuntu-20.04
 Ubuntu 20.04 LTS is already installed.
 Launching Ubuntu 20.04 LTS...
 
 error : can't find file specified. <Fix by enabling wsl2 via control panel -> wsl2
 
-C:\wsl2>wsl -l -v
+> wsl -l -v
   NAME            STATE           VERSION
 * Ubuntu-20.04    Stopped         2
 
-C:\wsl2>wsl --set-version Ubuntu-20.04 2
+> wsl --set-version Ubuntu-20.04 2
 For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 Conversion in progress, this may take a few minutes.
 The distribution is already the requested version.
 
-C:\wsl2>wslconfig /u Ubuntu-20.04
+> wslconfig /u Ubuntu-20.04
 Unregistering.
 The operation completed successfully.
 
-C:\wsl2>wsl --install -d Ubuntu-20.04
+> wsl --install -d Ubuntu-20.04
 Ubuntu 20.04 LTS is already installed.
 Launching Ubuntu 20.04 LTS...
 
@@ -138,11 +137,11 @@ wsl2user@apks1318:~$ sudo apt update
 do regular update and upgrade
 > sudo apt update && sudo apt upgrade
 
-C:\wsl2>wsl --set-default-version 2
+> wsl --set-default-version 2
 For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 The operation completed successfully.
 
-C:\wsl2>wsl --set-default Ubuntu-20.04 2
+> wsl --set-default Ubuntu-20.04 2
 The operation completed successfully.
 
 C:\wsl2>wsl --set-version Ubuntu-20.04 2
@@ -150,22 +149,22 @@ For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 Conversion in progress, this may take a few minutes.
 The distribution is already the requested version.
 
-C:\wsl2>wsl -l -v
+> wsl -l -v
   NAME            STATE           VERSION
 * Ubuntu-20.04    Running         2
 
 How to Upgrade WSL 2 or 1 Ubuntu 20.04 to 22.04 LTS
 https://www.how2shout.com/linux/how-to-upgrade-wsl-2-or-1-ubuntu-20-04-to-22-04-lts/
 
-sudo apt update
-sudo apt upgrade
-sudo apt dist-upgrade
-sudo apt install update-manager-core
+> sudo apt update
+> sudo apt upgrade
+> sudo apt dist-upgrade
+> sudo apt install update-manager-core
 #Edit release-upgrades configuration file using the below-given command: prompt=lts
-sudo nano /etc/update-manager/release-upgrades
+> sudo nano /etc/update-manager/release-upgrades
 
 Upgrade to Ubuntu 20.04 (Focal Fossa) to Ubuntu 22.04 (Jelly Fish)
->sudo do-release-upgrade -d
+> sudo do-release-upgrade -d
 
 After running the above command, the system will update and replace the system repository and after that, once the system is ready to get upgraded, you will ask finally whether you want to upgrade or not. If you have changed your mind then type ‘n‘ and the system will roll back all the made changes.
 
